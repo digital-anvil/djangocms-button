@@ -12,7 +12,7 @@ from .conf import settings
 
 
 @python_2_unicode_compatible
-class Button(CMSPlugin):
+class ButtonMixin(models.Model):
     TARGET_CHOICES = (
         ('', _('same window')),
         ('_blank', _('new window')),
@@ -69,3 +69,11 @@ class Button(CMSPlugin):
         return self.name
 
     search_fields = ('name', )
+
+    class Meta:
+        abstract = True
+
+
+@python_2_unicode_compatible
+class Button(CMSPlugin, ButtonMixin):
+    pass
