@@ -8,11 +8,9 @@ from .models import Button
 
 class ButtonForm(ModelForm):
     try:
-        print 'yessss'
         from .fields import PageSearchField
         page_link = PageSearchField(label=_('Page'), required=False)
     except ImportError:
-        print 'nooooo'
         from cms.forms.fields import PageSelectFormField
         page_link = PageSelectFormField(label=_('Page'), required=False)
 
