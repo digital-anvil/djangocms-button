@@ -1,10 +1,11 @@
-** WIP - Not production ready **
+**WIP - Not production ready**
 
 Todo
 ----
 
 - Support Foundation / Bootstrap default button sets
 - Documentation
+- Explore button group support
 
 
 Inspiration
